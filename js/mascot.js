@@ -22,18 +22,8 @@
  */
 $(document).ready(function(){
 	if(usemascots == true){
-		$("#mascot").append("<img src='"+mascotimg+"' width='"+mascotwidth+"' height='"+mascotheight+"'>");	
-		switch(mascotpos){
-			case "right":
-				$("#mascot").css("right", "0px");
-				break;
-			case "left":
-				$("#mascot").css("left", "0px");
-				break;
-			default:
-				$("#mascot").css("left", "0px");
-				break;
-		}
+		$("#mascot").append("<img src='"+mascotimg+"' width='"+mascotwidth+"' height='"+mascotheight+"'>");
+		$("#mascot").css( (mascotpos == "right") ? "right" : "left", "0px");
 		$("#mascot").css("bottom", "0px");
 		$("#mascot").css("opacity", mascotopacity);
 		$("#mascot").css("width", mascotwidth);
